@@ -4,22 +4,9 @@ A command-line loan calculator built in Go as part of the [Hyperskill](https://h
 
 ## Usage
 
-### Current (Stage 3) — annuity calculator
+### Usage
 
-Provide `--interest` and any two of the three remaining flags; the calculator solves for the missing one:
-
-```bash
-# Calculate monthly payment
-go run "Loan Calculator (Go)/task/main.go" --principal=1000000 --periods=60 --interest=10
-
-# Calculate number of months
-go run "Loan Calculator (Go)/task/main.go" --principal=1000000 --payment=15000 --interest=10
-
-# Calculate loan principal
-go run "Loan Calculator (Go)/task/main.go" --payment=8721.8 --periods=120 --interest=5.6
-```
-
-### Stage 4 (full calculator)
+Provide `--type`, `--interest`, and any two of the three remaining flags; the calculator solves for the missing one and prints the overpayment.
 
 ```bash
 # Differentiated payments
@@ -39,13 +26,11 @@ go run "Loan Calculator (Go)/task/main.go" --type=annuity --principal=500000 --p
 
 | Flag | Description |
 |------|-------------|
-| `--type` | Payment type: `annuity` or `diff` (Stage 4, required) |
+| `--type` | Payment type: `annuity` or `diff` (required) |
 | `--principal` | Loan principal amount |
 | `--periods` | Number of monthly payments |
-| `--payment` | Monthly payment amount |
+| `--payment` | Monthly payment amount (annuity only) |
 | `--interest` | Annual interest rate in percent, e.g. `10` for 10% (required) |
-
-Provide any 3 of the 4 non-type parameters; the calculator solves for the missing one and prints the overpayment.
 
 ## Formulas
 
