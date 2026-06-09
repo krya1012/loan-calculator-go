@@ -4,38 +4,45 @@ A command-line loan calculator built in Go as part of the [Hyperskill](https://h
 
 ## Usage
 
-### Current (Stage 2) — interactive mode
+### Current (Stage 3) — annuity calculator
+
+Provide `--interest` and any two of the three remaining flags; the calculator solves for the missing one:
 
 ```bash
-go run "Loan Calculator (Go)/task/main.go"
-```
+# Calculate monthly payment
+go run "Loan Calculator (Go)/task/main.go" --principal=1000000 --periods=60 --interest=10
 
-The program prompts for a loan principal, then asks whether to calculate the number of monthly payments (`m`) or the monthly payment amount (`p`).
+# Calculate number of months
+go run "Loan Calculator (Go)/task/main.go" --principal=1000000 --payment=15000 --interest=10
+
+# Calculate loan principal
+go run "Loan Calculator (Go)/task/main.go" --payment=8721.8 --periods=120 --interest=5.6
+```
 
 ### Stage 4 (full calculator)
 
 ```bash
 # Differentiated payments
-go run main.go --type=diff --principal=1000000 --periods=10 --interest=10
+go run "Loan Calculator (Go)/task/main.go" --type=diff --principal=1000000 --periods=10 --interest=10
 
 # Annuity payment amount
-go run main.go --type=annuity --principal=1000000 --periods=60 --interest=10
+go run "Loan Calculator (Go)/task/main.go" --type=annuity --principal=1000000 --periods=60 --interest=10
 
 # Loan principal
-go run main.go --type=annuity --payment=8722 --periods=120 --interest=5.6
+go run "Loan Calculator (Go)/task/main.go" --type=annuity --payment=8722 --periods=120 --interest=5.6
 
 # Number of months to repay
-go run main.go --type=annuity --principal=500000 --payment=23000 --interest=7.8
+go run "Loan Calculator (Go)/task/main.go" --type=annuity --principal=500000 --payment=23000 --interest=7.8
 ```
 
 ### Parameters
 
 | Flag | Description |
 |------|-------------|
-| `--type` | Payment type: `annuity` or `diff` (required) |
+| `--type` | Payment type: `annuity` or `diff` (Stage 4, required) |
 | `--principal` | Loan principal amount |
 | `--periods` | Number of monthly payments |
-| `--payment` | Monthly payment amount (annuity only) |
+| `--payment` | Monthly payment amount |
 | `--interest` | Annual interest rate in percent, e.g. `10` for 10% (required) |
 
 Provide any 3 of the 4 non-type parameters; the calculator solves for the missing one and prints the overpayment.

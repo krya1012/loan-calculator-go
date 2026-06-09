@@ -11,12 +11,11 @@
 - Handle non-integer payments by rounding up; show adjusted last payment when it differs
 - Singular/plural grammar for month count output
 
-## [Stage 3] — Annuity payment *(upcoming)*
+## [Stage 3] — Annuity payment
 
-- Switch to CLI flag parsing via the `flag` package
-- Implement annuity payment formula
-- Solve for whichever of principal, periods, or payment is missing
-- Format period output as years and months (e.g. "8 years and 2 months")
+- Switch to CLI flag parsing via the `flag` package (`--principal`, `--periods`, `--payment`, `--interest`)
+- Implement annuity payment formula; solve for whichever of principal, periods, or payment is missing
+- Format period output as years and months with correct singular/plural (e.g. "8 years and 2 months")
 
 ## [Stage 4] — Differentiate payment *(upcoming)*
 
