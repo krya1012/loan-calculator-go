@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# JetBrains / GoLand
+.idea/
+*.iml
+
+# Go binaries
+*.exe
+*.out
+
+# Python (test runner)
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/

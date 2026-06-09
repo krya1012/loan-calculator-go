@@ -1,0 +1,25 @@
+# Changelog
+
+## [Stage 1] — Beginning
+
+- Print hardcoded loan repayment summary in correct order using `fmt.Println`
+
+## [Stage 2] — Dreamworld *(upcoming)*
+
+- Interactive stdin-based calculator for 0% interest loans
+- Calculate number of months or monthly payment from user input
+- Handle non-integer payments by rounding up; show adjusted last payment when it differs
+
+## [Stage 3] — Annuity payment *(upcoming)*
+
+- Switch to CLI flag parsing via the `flag` package
+- Implement annuity payment formula
+- Solve for whichever of principal, periods, or payment is missing
+- Format period output as years and months (e.g. "8 years and 2 months")
+
+## [Stage 4] — Differentiate payment *(upcoming)*
+
+- Add `--type` flag (`annuity` or `diff`)
+- Implement differentiated payment formula with per-month output
+- Calculate and display overpayment for both payment types
+- Validate all inputs; print `Incorrect parameters` on any invalid combination
