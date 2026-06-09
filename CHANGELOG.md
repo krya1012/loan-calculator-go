@@ -4,11 +4,12 @@
 
 - Print hardcoded loan repayment summary in correct order using `fmt.Println`
 
-## [Stage 2] — Dreamworld *(upcoming)*
+## [Stage 2] — Dreamworld
 
 - Interactive stdin-based calculator for 0% interest loans
 - Calculate number of months or monthly payment from user input
 - Handle non-integer payments by rounding up; show adjusted last payment when it differs
+- Singular/plural grammar for month count output
 
 ## [Stage 3] — Annuity payment *(upcoming)*
 

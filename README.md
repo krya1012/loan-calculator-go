@@ -4,6 +4,14 @@ A command-line loan calculator built in Go as part of the [Hyperskill](https://h
 
 ## Usage
 
+### Current (Stage 2) — interactive mode
+
+```bash
+go run "Loan Calculator (Go)/task/main.go"
+```
+
+The program prompts for a loan principal, then asks whether to calculate the number of monthly payments (`m`) or the monthly payment amount (`p`).
+
 ### Stage 4 (full calculator)
 
 ```bash
